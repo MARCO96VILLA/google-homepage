@@ -11,9 +11,24 @@
     align-content: center;
 }
 #searchbar {
-    width: 400px;
-    height: 30px;
+    margin-top: 20px;
+    width: 600px;
+    height: 40px;
     border-radius: 20px;
+}
+.searchbuttons {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+#googlesearch {
+    width: 150px;
+    margin-right: 20px;
+    height: 35px;
+}
+#feelinglucky {
+    width: 150px;
+    height: 35px;
 }
 </style>
 </head>
@@ -22,11 +37,22 @@
         <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
     </div>
     <div>
+        <div>
         <form class="searchbar">
             <label for="searchbar">
             <input type="text" id="searchbar" name="searchbar"><br><br>
-
             </label>
         </form>
+        </div>
+        <div>
+            <form class="searchbuttons">
+                <label for="googlesearch">
+                    <input type="button" id="googlesearch" name="googlesearch" value="Google Search">
+                </label>
+                <label for="feelinglucky">
+                    <input type="button" id="feelinglucky" name="feelinglucky" value="I'm Feeling Lucky">
+                </label>
+            </form>
+        </div>
     </div>
 </body>
