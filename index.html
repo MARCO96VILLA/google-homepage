@@ -16,24 +16,111 @@ body {
     align-content: center;
 }
 #searchbar {
-    margin-top: 20px;
-    width: 600px;
-    height: 40px;
-    border-radius: 20px;
+    background: #fff;
+    display: flex;
+    border: 1px solid #dfe1e5;
+    box-shadow: none;
+    border-radius: 24px;
+    z-index: 3;
+    height: 44px;
+    margin: 0 auto;
+    width: 584px;
+}
+#searchbar:hover {
+    background-color: #fff;
+    box-shadow: 0 1px 6px rgba(32,33,36,.28);
+    border-color: rgba(223,225,229,0);
+}
+.innersearch {
+    display: flex;
+    padding: 5px 8px 0 16px;
+    padding-left: 14px;
+    width: 560px;
+    height: 39px;
+}
+.leftlens {
+    display: flex;
+    align-items: center;
+    padding-right: 13px;
+    margin-top: -5px;
+    width: 20px;
+    height: 44px;
+}
+.leftlens2 {
+    margin: auto;
+    width: 20px;
+    height: 26px;
+}
+.spanlens {
+    margin-top: 3px;
+    color: #9aa0a6;
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    position: relative;
+}
+.lenssvg {
+    color: #9aa0a6;
+    fill: currentColor;
+}
+.searchbardiv {
+    display: flex;
+    height: 39px;
+    width: 527px;
+}
+.searchbardiv2 {
+    color: transparent;
+    flex: 100%;
+    white-space: pre;
+    height: 34px;
+}
+#searchbarinp {
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+    color: rgba(0,0,0,.87);
+    word-wrap: break-word;
+    outline: none;
+    display: flex;
+    flex: 100%;
+    margin-top: -37px;
+    height: 34px;
+    font-size: 16px;
+}
+.paddingdiv {
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 .searchbuttons {
     display: flex;
     justify-content: center;
     align-content: center;
+    padding-top: 18px;
 }
 #googlesearch {
     width: 150px;
     margin-right: 20px;
-    height: 35px;
+    height: 36px;
 }
 #feelinglucky {
     width: 150px;
-    height: 35px;
+    height: 36px;
+}
+.sbuttons {
+    font-family: arial,sans-serif;
+    color: #3c4043;
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    font-size: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.sbuttons:hover {
+    box-shadow: 0 1px 1px rgba(0,0,0,.1);
+    background-color: #f8f9fa;
+    border: 1px solid #dadce0;
+    color: #202124;
 }
 a {
     text-decoration: none;
@@ -45,6 +132,7 @@ a.topnav {
     font-family: arial,sans-serif;
     font-size: 13px;
     color: rgba(0,0,0,0.87);
+    cursor: pointer;
 }
 li {
   display: inline;
@@ -61,6 +149,7 @@ ul {
     display: flex;
     justify-content: flex-end;
     margin-top: -15px;
+    padding-bottom: 80px;
 }
 .gb_Ve {
     color: #5f6368;
@@ -94,6 +183,7 @@ ul {
     padding-right: 20px;
 }
 </style>
+<title>Google Homepage</title>
 </head>
 <body>
     <div class="topnavbar">
@@ -107,21 +197,36 @@ ul {
     <div class="google-logo">
         <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
     </div>
-    <div>
+    <div class="paddingdiv">
         <div>
         <form class="searchbar">
             <label for="searchbar">
-            <input type="text" id="searchbar" name="searchbar"><br><br>
+            <div id="searchbar">
+                <div class="innersearch">
+                    <div class="leftlens">
+                        <div class="leftlens2">
+                            <span class="spanlens">
+                                <svg class="lenssvg" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="searchbardiv">
+                        <div class="searchbardiv2">
+                            <input type="text" id="searchbarinp" name="searchbar">
+                        </div>
+                    </div>
+                </div>
+            </div>
             </label>
         </form>
         </div>
         <div>
             <form class="searchbuttons">
                 <label for="googlesearch">
-                    <input type="button" id="googlesearch" name="googlesearch" value="Google Search">
+                    <input class="sbuttons" type="button" id="googlesearch" name="googlesearch" value="Google Search">
                 </label>
                 <label for="feelinglucky">
-                    <input type="button" id="feelinglucky" name="feelinglucky" value="I'm Feeling Lucky">
+                    <input class="sbuttons" type="button" id="feelinglucky" name="feelinglucky" value="I'm Feeling Lucky">
                 </label>
             </form>
         </div>
